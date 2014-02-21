@@ -1,0 +1,833 @@
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:14:58 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 4823ms (Views: 4821.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:16:44 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:19:24 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:19:24 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:19:58 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:19:58 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:22:47 -0600
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:22:47 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:22:48 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:24:22 -0600
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:24:22 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:24:22 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:24:48 -0600
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:24:48 -0600
+Processing by StaticPagesController#about as HTML
+Completed 500 Internal Server Error in 38ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:24:48 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:27:16 -0600
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:27:16 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:27:16 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:38:08 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb (2.0ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:38:08 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:38:08 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:38:09 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:38:09 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:38:09 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:41:47 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb (1.7ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:41:47 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:41:47 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:41:47 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:41:47 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:41:47 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:13 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb (2.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:13 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:51:13 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:13 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:51:13 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:13 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:51:53 -0600
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb (1.8ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:53 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:53 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:53 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:51:54 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:51:54 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:56:18 -0600
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb (2.3ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 12:56:18 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:56:18 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 12:56:18 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:56:18 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 12:56:18 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:02:13 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb (2.6ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:02:13 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:02:13 -0600
+Processing by StaticPagesController#home as HTML
+Completed 500 Internal Server Error in 31ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:02:13 -0600
+Processing by StaticPagesController#home as HTML
+Completed 500 Internal Server Error in 20ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:02:13 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:02:13 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:04:25 -0600
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb (1.9ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:04:25 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:04:25 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:04:25 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:04:25 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:04:25 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:06:30 -0600
+Processing by StaticPagesController#help as HTML
+ERROR: compiling _app_views_static_pages_help_html_erb___119010887187189226_2159952120 RAISED /Users/Jerry/Code/NSS3/draft_day/app/views/static_pages/help.html.erb:2: syntax error, unexpected '<', expecting keyword_end
+<!DOCTYPE html>
+ ^
+/Users/Jerry/Code/NSS3/draft_day/app/views/static_pages/help.html.erb:3: syntax error, unexpected '<'
+<html>
+ ^
+/Users/Jerry/Code/NSS3/draft_day/app/views/static_pages/help.html.erb:5: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <title>Draft Day | <%= yield(:title) ;@output...
+                    ^
+Function body:           def _app_views_static_pages_help_html_erb___119010887187189226_2159952120(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "static_pages/help";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; provide(:title, 'Help')
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draft Day | <%= yield(:title) ;@output_buffer.safe_append='</title>
+  </head>
+  <body>
+    <h1>Draft Day Help</h1>
+    <p>
+      This is the help page for Draft Day.
+    </p>
+  </body>
+</html>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Jerry/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__2881030637941774821__process_action__callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3782430037761660741__call__callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-test-0.6.2/lib/rack/mock_session.rb:30:in `request'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-test-0.6.2/lib/rack/test.rb:230:in `process_request'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-test-0.6.2/lib/rack/test.rb:57:in `get'
+/Users/Jerry/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/forwardable.rb:171:in `get'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/browser.rb:59:in `process'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/browser.rb:35:in `process_and_follow_redirects'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/browser.rb:21:in `visit'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/driver.rb:42:in `visit'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/session.rb:193:in `visit'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+/Users/Jerry/Code/NSS3/draft_day/spec/requests/static_pages_spec.rb:18:in `block (3 levels) in <top (required)>'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:114:in `instance_eval'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:114:in `block in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:179:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:179:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-rails-2.13.1/lib/rspec/rails/adapters.rb:50:in `block (2 levels) in <module:MiniTestLifecycleAdapter>'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/extensions/instance_eval_with_args.rb:16:in `instance_exec'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/extensions/instance_eval_with_args.rb:16:in `instance_eval_with_args'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:247:in `instance_eval_with_args'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:87:in `block (2 levels) in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:89:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:89:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:418:in `run_hook'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:329:in `run_around_each_hooks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:256:in `with_around_each_hooks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:111:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:390:in `block in run_examples'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:386:in `map'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:386:in `run_examples'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:371:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:372:in `block in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:372:in `map'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:372:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:28:in `block (2 levels) in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:28:in `map'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:28:in `block in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/reporter.rb:34:in `report'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:25:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/runner.rb:80:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/runner.rb:17:in `block in autorun'
+  Rendered static_pages/help.html.erb (26.3ms)
+Completed 500 Internal Server Error in 48ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:06:30 -0600
+Processing by StaticPagesController#help as HTML
+ERROR: compiling _app_views_static_pages_help_html_erb___119010887187189226_2159952120 RAISED /Users/Jerry/Code/NSS3/draft_day/app/views/static_pages/help.html.erb:2: syntax error, unexpected '<', expecting keyword_end
+<!DOCTYPE html>
+ ^
+/Users/Jerry/Code/NSS3/draft_day/app/views/static_pages/help.html.erb:3: syntax error, unexpected '<'
+<html>
+ ^
+/Users/Jerry/Code/NSS3/draft_day/app/views/static_pages/help.html.erb:5: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <title>Draft Day | <%= yield(:title) ;@output...
+                    ^
+Function body:           def _app_views_static_pages_help_html_erb___119010887187189226_2159952120(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "static_pages/help";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; provide(:title, 'Help')
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draft Day | <%= yield(:title) ;@output_buffer.safe_append='</title>
+  </head>
+  <body>
+    <h1>Draft Day Help</h1>
+    <p>
+      This is the help page for Draft Day.
+    </p>
+  </body>
+</html>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Jerry/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:403:in `_run__2881030637941774821__process_action__callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3782430037761660741__call__callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-test-0.6.2/lib/rack/mock_session.rb:30:in `request'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-test-0.6.2/lib/rack/test.rb:230:in `process_request'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rack-test-0.6.2/lib/rack/test.rb:57:in `get'
+/Users/Jerry/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/forwardable.rb:171:in `get'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/browser.rb:59:in `process'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/browser.rb:35:in `process_and_follow_redirects'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/browser.rb:21:in `visit'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/rack_test/driver.rb:42:in `visit'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/session.rb:193:in `visit'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/capybara-2.1.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+/Users/Jerry/Code/NSS3/draft_day/spec/requests/static_pages_spec.rb:22:in `block (3 levels) in <top (required)>'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:114:in `instance_eval'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:114:in `block in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:179:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:179:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-rails-2.13.1/lib/rspec/rails/adapters.rb:50:in `block (2 levels) in <module:MiniTestLifecycleAdapter>'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/extensions/instance_eval_with_args.rb:16:in `instance_exec'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/extensions/instance_eval_with_args.rb:16:in `instance_eval_with_args'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:247:in `instance_eval_with_args'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:87:in `block (2 levels) in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:89:in `call'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:89:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/hooks.rb:418:in `run_hook'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:329:in `run_around_each_hooks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:256:in `with_around_each_hooks'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example.rb:111:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:390:in `block in run_examples'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:386:in `map'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:386:in `run_examples'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:371:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:372:in `block in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:372:in `map'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/example_group.rb:372:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:28:in `block (2 levels) in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:28:in `map'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:28:in `block in run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/reporter.rb:34:in `report'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/command_line.rb:25:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/runner.rb:80:in `run'
+/Users/Jerry/.rvm/gems/ruby-2.0.0-p353@draft_day/gems/rspec-core-2.13.1/lib/rspec/core/runner.rb:17:in `block in autorun'
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:06:30 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:06:30 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:06:30 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 101ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:06:30 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:07:10 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb (2.3ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-20 13:07:10 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:07:10 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-20 13:07:10 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:07:10 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-20 13:07:10 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:08:53 -0600
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 165ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:08:53 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:08:53 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:08:53 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:08:53 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:08:53 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:15:58 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:15:58 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:15:58 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:15:58 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:15:58 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:15:58 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:16:55 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:16:55 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:16:55 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:16:55 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:16:55 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:16:55 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:17:32 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/about" for 127.0.0.1 at 2014-02-21 11:17:32 -0600
+Processing by StaticPagesController#about as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:17:32 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/help" for 127.0.0.1 at 2014-02-21 11:17:32 -0600
+Processing by StaticPagesController#help as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:17:32 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/static_pages/home" for 127.0.0.1 at 2014-02-21 11:17:32 -0600
+Processing by StaticPagesController#home as HTML
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
