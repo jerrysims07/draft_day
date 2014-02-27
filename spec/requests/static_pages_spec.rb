@@ -42,4 +42,9 @@ describe "StaticPages" do
     end 
   end 
 
+  describe "User Signup page" do
+    before {visit signup_path }
+    it "should have button call 'Sign Up'" do
+      expect(page).to have_content
+
 end
