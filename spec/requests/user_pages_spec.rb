@@ -1,4 +1,3 @@
-
 require 'spec_helper'
 
 describe "UserPages" do
@@ -10,6 +9,15 @@ describe "UserPages" do
 
     it { should have_content(user.name)}
     it { should have_title(user.name)}
+    it { should have_selector('a', text: 'Create New League')}
+
+    context "with no leagues"
+      it { should have_content('You have not created a league yet.')}
+
+    # context "with leagues"
+    #   #create a new league here
+    #   it {should have_content('My Leagues:')}
+
   end
 
   describe "signup page" do
