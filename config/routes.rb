@@ -12,7 +12,7 @@ DraftDay::Application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'
-  
+  post '/sessions/user', to: 'sessions#create'
   delete '/signout', to: 'sessions#destroy'
   get '/leagues', to: 'leagues#new'
   post '/users/new', to: 'users#create'

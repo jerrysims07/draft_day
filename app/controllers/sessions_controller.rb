@@ -1,11 +1,20 @@
 class SessionsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def new
     # @session = Session.new
   end
 
   def create
-    render 'new'
+    user = User.find_by(email: params[:session][:email].downcase)
+    if user
+      sign_in user
+      redirect_to user
+    else
+      flash.now[:error] = 'invalid email/password combination'
+      render 'new'
+    end
   end
 
   def destroy
