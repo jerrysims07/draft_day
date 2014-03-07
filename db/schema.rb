@@ -11,13 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301033424) do
+ActiveRecord::Schema.define(version: 20140306190519) do
 
   create_table "leagues", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "passTDs"
+    t.integer  "passYds"
+    t.integer  "intThrown"
+    t.integer  "rushTDs"
+    t.integer  "rushYds"
+    t.integer  "recTDs"
+    t.integer  "recYds"
+    t.integer  "twoPt"
+    t.integer  "retTDs"
+    t.integer  "fumbLost"
+    t.integer  "FG50up"
+    t.integer  "FG40to49"
+    t.integer  "FG39down"
+    t.integer  "PAT"
+    t.integer  "FGmissed"
+    t.integer  "defTD"
+    t.integer  "defINT"
+    t.integer  "defFumbRec"
+    t.integer  "defBlock"
+    t.integer  "defSafety"
+    t.integer  "defSack"
+    t.integer  "ptsAllowed0"
+    t.integer  "ptsAllowed1to6"
+    t.integer  "ptsAllowed7to13"
+    t.string   "ptsAllowed14to17"
+    t.string   "ptsAllowed18to27"
+    t.string   "ptsAllowed28to34"
+    t.string   "ptsAllowed35to45"
+    t.integer  "ptsAllowed46plus"
   end
 
   create_table "players", force: true do |t|
@@ -31,12 +60,6 @@ ActiveRecord::Schema.define(version: 20140301033424) do
   create_table "projected_players", force: true do |t|
     t.string   "slot"
     t.float    "points"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "stat_cats", force: true do |t|
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -5,5 +5,5 @@
   <% if @user.leagues.count == 0 %>
   You have not created a league yet.
   <% end %>
-  <%= link_to "Create New League", leagues_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "Create New League", new_league_path, class: "btn btn-large btn-primary" %>
 </div>

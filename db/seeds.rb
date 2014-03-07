@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+statCats = StatCat.create([{name: "passTDs", standardScore: 4, threshold: 1, units: "TD"}, {name: "passYds", standardScore: 1, threshold: 25, units: "Yards"}])
+statCats.each {|sc| sc.save}
