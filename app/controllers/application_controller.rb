@@ -7,4 +7,21 @@ class ApplicationController < ActionController::Base
     def after_sign_in_path_for(user)
         user_path(user)
     end
+
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :name
+  end
+
+# #the following block of code is from a SO article and I may need to switch around the symbols for my app
+# before_filter :configure_devise_params, if: :devise_controller?
+#   def configure_devise_params
+#     devise_parameter_sanitizer.for(:sign_up) do |u|
+#       u.permit(:first_name, :last_name, :gender, :email, :password, :password_confirmation)
+#     end
+#   end
+
 end

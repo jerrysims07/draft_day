@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
   def new
     @user = User.new
   end
 
   def create
+puts "JERRY: " + user_params
     @user = User.new(user_params)
-    if @user.save
+    if @user.save!
       redirect_to signin_path
     else
       render 'new'

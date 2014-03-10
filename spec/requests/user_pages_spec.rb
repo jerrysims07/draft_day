@@ -1,62 +1,53 @@
 require 'spec_helper'
+require 'support/spec_test_helper.rb'
 
 describe "UserPages" do
   subject { page }
 
   describe "profile page" do
-    let(:user) {FactoryGirl.create(:user)}
-    before { visit user_path(user) }
+    let(:user) { FactoryGirl.create(:user) }
 
+
+    before do 
+      sign_in user
+    end
+
+    it { should have_no_content('You need to sign in or sign up before continuing') }
     it { should have_content(user.name)}
-    it { should have_title(user.name)}
+    it { should have_title(user.name)}  
     it { should have_selector('a', text: 'Create New League')}
 
     context "with no leagues"
       it { should have_content('You have not created a league yet.')}
 
-    # context "with leagues"
-    #   #create a new league here
-    #   it {should have_content('My Leagues:')}
-
-  end
-
-  describe "signup page" do
-    before { visit signup_path }
-
-    it { should have_selector('h1',   text: 'Sign up') }
-  end    
-
-  describe "clicking signup button" do
-    before { visit signup_path } 
-    let(:submit) {"Create Account"}
-
-    describe "with no data" do
-      it "should not work" do
-       expect { click_button "Create Account" }.not_to change(User, :count)
-      end
-    end
-
-    describe "with valid data" do
+    context "with leagues" do
+      
       before do
-        fill_in "user_name", with: "Johnny"
-        fill_in "user_email", with: "user@example.com"
-        fill_in "user_password", with: "password"
+        visit new_league_path
+        fill_in 'League_name', with: 'My Test League Name'
+        click_button 'Create League'
       end
 
-      it "should create a new user" do
-        expect { click_button submit }.to change(User, :count).by(1)
-      end
+      it {should have_content('My Leagues:')}
+      it {should have_content('My Test League Name')}
     end
   end
-end
 
-
-  # describe "Home Page" do
-  #   before { visit root_path}
-  #   it "should have the content 'Draft Day'" do 
-  #     expect(page).to have_content('Draft Day')
+  # describe "signup page" do
+  #   before do
+  #     visit new_user_registration_path
   #   end
-  #   it "should have the right name" do
-  #     expect(page).to have_title("Draft Day | Home")
-  #   end 
-  # end
+
+  #   context "valid data should correctly populate model"
+
+  #     before do
+  #       fill_in 'user_name', with: 'Jerry'
+  #       fill_in 'user_email', with: 'jerry@jerry.com'
+  #       fill_in 'user_password', with: 'jerryjerry'
+  #       fill_in 'user_password_confirmation', with: 'jerryjerry'
+  #       click_button 'Sign up'
+  #     end
+
+  #     it { should current_user.name == user.name }
+  #   end
+end

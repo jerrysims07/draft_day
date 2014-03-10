@@ -2,15 +2,14 @@ class LeaguesController < ApplicationController
   
   def new 
     @league = League.new
-    @league.build
+    # @league.build
   end
     
   def create
-    puts params[:League]
     @league = current_user.leagues.new(league_params)
     # @statCat = (standardScore => params[:ScoringRule][:passTDs], name => params[:ScoringRule])
     if @league.save
-      render 'new'
+      redirect_to user_path current_user 
 
     # else
     #   render 'new'

@@ -5,7 +5,6 @@ ruby '2.0.0'
 gem 'rails', '4.0.3'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'devise'
-gem 'cucumber'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
@@ -16,6 +15,8 @@ group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'  
 end
 
 gem 'sass-rails', '4.0.1'

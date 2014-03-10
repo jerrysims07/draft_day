@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+  let(:user) { FactoryGirl.create(:user)}
   
   describe "Home Page" do
     before { visit root_path}
@@ -10,6 +11,19 @@ describe "StaticPages" do
     it "should have the right name" do
       expect(page).to have_title("Draft Day | Home")
     end 
+
+    context "when already signed in" do
+      before(:each) do
+        StaticPagesController.any_instance.stub(current_user: user, authenticate_user!: true)
+        visit root_path
+      end
+      it "should not have 'Sign Up Today' button" do
+        expect(page).to have_no_content( 'Sign up now!')
+      end
+      it " should have 'Go to My Leagues' button" do
+        expect(page).to have_content( 'Go to My Leagues' )
+      end
+    end
   end
 
   describe "Help Page" do
@@ -43,7 +57,7 @@ describe "StaticPages" do
   end 
 
   describe "User Signup page" do
-    before {visit signup_path } 
+    before {visit new_user_registration_path } 
     it "should have button call 'Sign Up'" do
       expect(page).to have_content('Sign up')
     end
