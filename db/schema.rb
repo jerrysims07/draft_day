@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140311202910) do
+ActiveRecord::Schema.define(version: 20140311212007) do
 
   create_table "history_stats", force: true do |t|
     t.string   "name"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140311202910) do
     t.integer  "year"
     t.float    "avgPtsAllowed"
     t.string   "position"
+    t.integer  "fantasyPts"
   end
 
   create_table "leagues", force: true do |t|
