@@ -13,7 +13,8 @@ describe "UserPages" do
     end
 
     it { should have_no_content('You need to sign in or sign up before continuing') }
-    it { should have_content(user.name)}
+    it { should have_content(user.name
+      )}
     it { should have_title(user.name)}  
     it { should have_selector('a', text: 'Create New League')}
 
@@ -28,6 +29,12 @@ describe "UserPages" do
         click_button 'Create League'
       end
 
+      it "league name links to correct page" do
+        @league = League.first
+        click_link 'My Test League Name'
+        expect(current_path).to eq(league_path(@league))
+      end
+      
       it {should have_content('My Leagues:')}
       it {should have_content('My Test League Name')}
     end

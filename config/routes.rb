@@ -20,7 +20,8 @@ DraftDay::Application.routes.draw do
   # post '/leagues', to: 'leagues#create'
   post '/users/new', to: 'users#create'
   post '/leagues/new', to: 'leagues#create'
-
+  post '/leagues/:id/edit', to: 'leagues#update', as: :update_league
+  delete 'leagues/:id', to: 'leagues#destroy', as: :delete_league
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

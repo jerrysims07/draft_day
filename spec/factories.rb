@@ -4,4 +4,9 @@ FactoryGirl.define do
     email "pookie@pookie.com"
     password "foobarry"
   end
+
+  factory :league do
+    name "My Test League"
+  end
+
 end

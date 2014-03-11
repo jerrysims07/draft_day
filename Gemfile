@@ -17,6 +17,7 @@ group :test do
   gem 'factory_girl_rails', '4.2.1'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'  
+  gem 'pry'
 end
 
 gem 'sass-rails', '4.0.1'

@@ -7,7 +7,7 @@
   <% else %>
   <h3>My Leagues:</h3>
     <% current_user.leagues.each do |league| %>
-      <%= league.name %><br>
+      <%= link_to league.name, league_path(league.id) %><br>
     <% end %>
   <% end %>
 </div>

@@ -1,0 +1,8 @@
+<% provide(:title, @league.name) %>
+<h1><%= @league.name %></h1>
+<ul>
+  <li><%= link_to "Enter Draft", '#', class: "btn btn-tiny btn-primary" %></li>
+  <li><%= link_to "Update Players", '#', class: "btn btn-tiny btn-primary" %></li>
+  <li><%= link_to "Edit League", edit_league_path, class: "btn btn-tiny btn-primary" %></li>
+  <li><%= link_to "Delete", @League, method: :delete, class: "btn btn-tiny btn-primary" %></li>
+</ul>

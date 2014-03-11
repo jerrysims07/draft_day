@@ -1,0 +1,57 @@
+<% provide(:title, 'Edit League') %>
+<h1>Update League: <%= @league.name %></h1>
+<p>Update any categories you need.  Your changes are not saved until you click 'Update'</p>
+<p>
+  <div>
+    <%= form_for :League do |f| %>
+    <div>
+      <h3>Quarterbacks</h3>
+      Passing Touchdowns:   <%= f.select(:passTDs, (0..10), :selected => @league.passTDs)     %> points per TD<br />
+      Passing Yards:        <%= f.select(:passYds, (0..100), :selected => @league.passYds)       %> yards per point<br />
+      Interception Thrown:  <%= f.select(:intThrown, (-5..0), :selected => @league.intThrown) %> points per INT <br />
+    </div>
+    <div>
+    <h3>WR / RB / TE </h3>  
+      Rushing Touchdowns: <%= f.select(:rushTDs, (0..10), :selected => @league.rushTDs) %>
+      points per TD<br />
+      Rushing Yards: <%= f.select(:rushYds, (0..100), :selected => @league.rushYds) %> yards per point<br />
+      Receiving Touchdowns: <%= f.select(:recTDs, (0..10), :selected => @league.recTDs) %>
+      points per TD<br />
+      Receiving Yards: <%= f.select(:recYds, (0..100), :selected => @league.recYds) %> yards per point<br />
+      Return Touchdowns: <%= f.select(:retTDs, (0..10), :selected => @league.retTDs) %> points per TD<br />
+    </div>
+    <div>
+      <h3>All Offense</h3>
+      Fumble Lost: <%= f.select(:fumbLost, (-5..0), :selected => @league.fumbLost) %> points per  fumble<br />
+      2-point Conversions: <%= f.select(:twoPt, (0..5), :selected => @league.twoPt) %> points per conversion.<br />
+    </div>
+    <div>
+      <h3>Kickers</h3>
+      Field Goal 50+ yds: <%= f.select(:FG50up, (0..10), :selected => @league.FG50up) %> points per FG<br />
+      Field Goal 40-49 yds: <%= f.select(:FG40to49, (0..10), :selected => @league.FG40to49) %> points per FG<br />
+      Field Goal 0-39 yds: <%= f.select(:FG39down, (0..10), :selected => @league.FG39down) %> points per FG<br />
+      Extra-Point: <%= f.select(:PAT, (0..3), :selected => @league.PAT) %> points per PAT<br />
+      Missed Field Goal: <%= f.select(:FGmissed, (-5..0), :selected => @league.FGmissed) %> points per missed FG
+    </div>
+    <div>
+      <h3>Team Defense</h3>
+      Defensive TD: <%= f.select(:defTD, (0..10), :selected => @league.defTD) %> points per TD<br />
+      Defensive INT: <%= f.select(:defINT, (0..5), :selected => @league.defINT) %> points per INT<br />
+      Fumble Recovery: <%= f.select(:defFumbRec, (0..5), :selected => @league.defFumbRec) %> points per recovery<br />
+      Block: <%= f.select(:defBlock, (0..5), :selected => @league.defBlock) %> points per block<br />
+      Sack: <%= f.select(:defSack, (0..5), :selected => @league.defSack) %> points per sack<br />
+      Safety: <%= f.select(:defSafety, (0..5), :selected => @league.defSafety) %> points per safety<br />
+      0 Points Allowed: <%= f.select(:ptsAllowed0, (0..10), :selected => @league.ptsAllowed0) %> <br />
+      1-6 Points Allowed: <%= f.select(:ptsAllowed1to6, (0..10), :selected => @league.ptsAllowed1to6) %> <br />
+      7-13 Points Allowed: <%= f.select(:ptsAllowed7to13, (-5..10), :selected => @league.ptsAllowed7to13) %> <br />
+      14-17 Points Allowed: <%= f.select(:ptsAllowed14to17, (-5..10), :selected => @league.ptsAllowed14to17) %> <br />
+      18-27 Points Allowed: <%= f.select(:ptsAllowed18to27, (-5..10), :selected => @league.ptsAllowed18to27) %> <br />
+      28-34 Points Allowed: <%= f.select(:ptsAllowed28to34, (-5..10), :selected => @league.ptsAllowed28to34) %> <br />
+      35-45 Points Allowed: <%= f.select(:ptsAllowed35to45, (-10..5), :selected => @league.ptsAllowed35to45) %> <br />
+      46+ Points Allowed: <%= f.select(:ptsAllowed46plus, (-10..0), :selected => @league.ptsAllowed46plus) %> <br />
+    </div>
+
+    <%= f.submit "Update" %>
+    <% end %>
+  </div>
+</p>

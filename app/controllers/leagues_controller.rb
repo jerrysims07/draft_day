@@ -1,4 +1,5 @@
 class LeaguesController < ApplicationController
+    before_filter :authenticate_user!
   
   def new 
     @league = League.new
@@ -15,6 +16,27 @@ class LeaguesController < ApplicationController
     #   render 'new'
     end
   end
+
+  def show
+    @league = League.find(params[:id])
+  end
+
+  def edit
+    @league = League.find(params[:id])
+  end
+
+  def update
+    @league = League.find(params['id'])
+    @league.update(league_params)
+    redirect_to league_path(@league)
+  end
+
+  def destroy
+    @league = League.find(params['id'])
+    @league.destroy
+    redirect_to user_path(current_user)
+  end
+
 
   private
   def league_params
