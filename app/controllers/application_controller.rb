@@ -16,12 +16,19 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
 
-# #the following block of code is from a SO article and I may need to switch around the symbols for my app
-# before_filter :configure_devise_params, if: :devise_controller?
-#   def configure_devise_params
-#     devise_parameter_sanitizer.for(:sign_up) do |u|
-#       u.permit(:first_name, :last_name, :gender, :email, :password, :password_confirmation)
-#     end
-#   end
+  helper_method :create_scoring_projections
+  helper_method :create_predraft_rankings
+
+  def create_scoring_projections(league)
+    puts "here is the new scoring projection:  " +league.passTDs.to_s
+  end
+
+  def create_predraft_rankings(league)
+    rbs = Player.where(:position => "RB").all
+    rbs.each do |rb| 
+      pdr = Predraft_Ranking.new(player_id: rb.id, league_id: league.id, position_rank: 1)
+      pdr.save
+    end
+  end
 
 end

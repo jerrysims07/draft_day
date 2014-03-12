@@ -40739,3 +40739,1861 @@ Processing by Devise::SessionsController#new as HTML
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (7.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$kQiKn36SNpj8B12mfyUm8eR6vSKK5a.EZsd9KbUf0QLvuq2QmT7B."], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:00:34 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.4ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/edit.html.erb within layouts/application (58.7ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 478ms (Views: 452.9ms | ActiveRecord: 0.4ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:00:35 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 13ms (ActiveRecord: 1.0ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:35 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered leagues/show.html.erb within layouts/application (210.9ms)
+Completed 500 Internal Server Error in 215ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$b0uQWtjd.TsOQEMX6f6uHOm5r3lAb1afYwscbpUfTntMSYTaJVBsS"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:35 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 250ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$MfsFo2INtBQ0bQNdzUzTaOL7..EpV0y7FljQlgP2j7I4zucqzeCc6"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:35 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:35 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 200ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$gjRJWcquygYKFXaOCte9b.K9P0CpbCVSqVqXqz2CV08ReAo1P0/8O"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:36 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 196ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$QkkMBaVFv9R5FnG6JTTRcOJgsihtY3N6oqoddm4wYQxQllO83i8zq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:36 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 195ms
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$xQeH6rE4HXsRiBldcMj.6uTPcScE18JyO7lbC8Y0WLn.D/SlDqYAm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:36 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 195ms
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Z9euTcp9/qzu5zszFOYfOuempfxqPq5HM0xNZj/qDBP9cgO5pu.Ly"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:00:36 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$DvQ3rBGKDythh8ogDqcTfu6Aw9RlhC2C5nIWRvMHq7NtqDV3aJZn."], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:36 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:36 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 256ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:37 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$844nTMNp7cg3CNJr.9aSbuhOaftHGsVb6pM0zQC1vd1qdnvfq9Xnm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:37 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:00:37 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:00:37 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$DUMuM7Ffz4XFkSDf/srWAOJMlBj8v10OBpj0QrH2VPyY0ilGVyKp."], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:00:37 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:00:37 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:00:37 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:00:37 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 203ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:42 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$iBL1IR4gHo.ZPcHFJNlqS.7/2YF4Wx2DBtwrvVfgRug8dtgiwpeFC"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:42 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (178.2ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:42 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:03:43 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.3ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/edit.html.erb within layouts/application (30.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 181ms (Views: 172.6ms | ActiveRecord: 0.3ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:03:43 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:43 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered leagues/show.html.erb within layouts/application (250.2ms)
+Completed 500 Internal Server Error in 254ms
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Zga.IOkS/RL8ddf98g8yNOuEBsUBZIqkQ/Nm0buSRd0Njlp6OVOEm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:03:43 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$ZRa4oF4fQrZV7PVXNlHmd.YcXrFPh24hwAZfGuy1STEzbYUiMoTbK"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:43 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 201ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$NyWq5LdvmsN.t1ahmOx8Mey6kw0ZT2y.5iMGmcmjJgLgfNm51MAH2"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:03:43 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$u5pX97a1oiRhmoMJxXS/zeokEf8W//45if2BoBRKnccp6jANPDEy2"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:43 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:43 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 197ms
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$UWtTBJdHfzhGinz3y/0.vOrl4V5RjJzYJWmpZ3kiYMpsOnate5CSG"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:44 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 196ms
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$TJdQobyug4MT7GBok7wTSu1EjAzm6LemZZh7Xovjp7MpGwhr/sCJm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:44 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 194ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$oNSfrDfcYvY1S6WSILedz.jMaNkrKZHaDtBKKA7DKt9KS7GCMymrS"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:44 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 196ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$roHccwdE3Z3MQffDF.ezy.LdoJzVE1uiSSDjYdyo2VzvFhVK5qKHq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:44 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:44 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 250ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:03:45 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$CMrLa2Kd6g0qcfOfGQKdUOoxHoSEEd/3p/Tw2xule4Xo4kYOb46oW"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:03:45 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:03:45 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:03:45 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:03:45 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 196ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$8Fv8tvP2AsbgBuaM60w.fe4yF7tEszxD6eh9EUdmQwtA0JZ.3ULqa"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:49 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.3ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 156ms (Views: 147.4ms | ActiveRecord: 0.3ms)
+Started DELETE "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:49 -0500
+Processing by LeaguesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "leagues" WHERE "leagues"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-03-12 07:04:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 15ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-12 07:04:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 71ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$k2iynew9B5Exer09bzpx1OEaJMwW/PgcUOWekNq9Vxc7JCmnQrxVG"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:04:49 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$nQLRMJ75sHyijra5Tx0x7uewbyQR/QtLSEsDYmw9SHb5zO7Z6Q9xm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:04:49 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$cFP3vRM0cgyQ9E/c8Wy/KeZFok5PJamKJ8ZNNyqK79gfGwUaMBZdu"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:49 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:04:49 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 99ms (Views: 96.6ms | ActiveRecord: 0.1ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$uxo84.NTnb9cdNllt.FJB.vAomf2hWbnq1MzVVxnDkF35LJTJyA1O"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$7BSEXGNhwipgkhEakstlC.wndQ6d5nl0FgS73g4ZXKnSBNwJnw6tK"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$pcXcmNvxc1Ngjt9SVnBh0ubtA3v.wyagchlxXQFpzM0/XOs3k0Tby"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (65.8ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$az/Sy3J7kYbZzkdtEl8pPu96EcZDthKW1jq7qQAHbSBawye7UiwjG"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$4ne08YP7wkO3wJcKYKbCZuaJkpNs.cvfptHnasHQ5aWP151miTQW2"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$AaQW0l8AqhdB47g.sKeZiuOzEwrfTzLqZlaPVTDLozIvRqT5nrSlO"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:04:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+Started GET "/predraft_rankings/1" for 127.0.0.1 at 2014-03-12 07:04:50 -0500
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:33 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$umpMksPSl8rAvps5SMoEKeBV4M0yw9XZ21OBKahKwzgyFVrCLlxBa"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:33 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:33 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:33 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:33 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.3ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 151ms (Views: 143.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$F1iXqlqPMlJetJOJ5rhffepfq1rxXtxR/UbBoxVhNjrY0TX7ViRnC"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.2ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (18.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$y1ucPRkKBKint3/xbhHy1exWrDOWUO1t0VR1v6pDdYoSrBgroupPu"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$gDMcCW.wSemdN./2Un1LvunOy5LMp4M6xvgCps2w9N786LIKlAJwq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$WZh/0kL0dzxy68Qpf.Tz8eiXsUVFq1VYDBlFwgExjWzpnaYJEj0uO"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$jANGYmsUGy2ZUnLFyZAl/eCedD2c.J7CsGMe26xJ8k1tgVffLRfWu"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$ggONNuH.C7bnyGOd5JdaLOG0eM5aKblSKfz83MOnSxcdFdgZ8HOZm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+Started DELETE "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "leagues" WHERE "leagues"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 15ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Fw2T7HJu0fKBIrXxY87W7O1IBV90bVSf1KFBTQTRRAem654pT15NC"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.2ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$fcO2o5ctu/Ll.rzWCaZT9eqn/J4AmK6XRObFp67cru.D8gBD19L4K"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$t8gGXA1x/7DAW1IGNcrukeKXfMHm7KuqL.CTMIboOtS0knVR9/vJq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:05:34 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+Started GET "/predraft_rankings/1" for 127.0.0.1 at 2014-03-12 07:05:34 -0500
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$46i75jyWTToFhOWtcTLsM.dshkAswAK8LMjPOlTSxduAAFrmigZMi"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.4ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/edit.html.erb within layouts/application (30.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 183ms (Views: 174.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$VsrUTYkAKsDi0qq/ZwyeuOMCJfVOjBT3Nn0ATJMGCQC.brligLtgW"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.2ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+Started GET "/predraft_rankings/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$BsZZJMNfCaSudo57bs2LQeoGZuts3uCR5cn.QDkeX.N1YNomf1Ugq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$68WSxVQ9kryH.UZ.Kkv65.D0tKWcUTDuOO78DZ5NM1J4OJn41owSe"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.2ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$w1yMJkwAjnOD.yMZD8oFXe6EfDAsc6Ci7GS3cgeQpP2Q7sJl5nLAW"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$iFhNY83RFgA.Y7AQkqd6D.IMLw3Ku/XP9jyOOIV00CEqFnVvVlf2O"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Jihrinr8gUo0JhRSyS6hz.mBoGLTolaUyx8ysCtlgAL9y6oanLfeS"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$eHZANsaxKikDmutzjdpr0u47DZ./7QKEu9srjgwVevjHfXa9hfzQ2"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$tsJsv3xNf0F6DxqCOrANCuaJ1Z4Y84dbVAsDu9jDLX/XisZuxzNri"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+Started DELETE "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by LeaguesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "leagues" WHERE "leagues"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 15ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-12 07:06:30 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:06:31 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$RW.unVofQR3Dbn9dA38tcOwKVAlwRTM1OjiDCvTencgXqnjnrAN7i"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:06:31 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:06:31 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:06:31 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:06:31 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:06:31 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:06:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:06:31 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$.JTnby1yrVdXBt7nPgcgyeyOu5.ESESWhdg9BCzNHCtjkyTRKD8GO"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.3ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 151ms (Views: 143.4ms | ActiveRecord: 0.3ms)
+Started GET "/predraft_rankings/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$d3EPDdoZrNBzrJhUGUiaJeUEEi1ZyAfPKHIGtPWa4RPOa3pl57P.."], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+Started DELETE "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by LeaguesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "leagues" WHERE "leagues"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 15ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$OS3IyjimHHn./vLyot48HeVPEoLjTXsMJTo2iCc7ALdabzNDA4yKG"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.2ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$o.b.YNBF9MUqOjqcbbENI.2iYD2Ige1w3DMv3/.uJWnWkdZBl0NOe"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.2ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$6ZBjTet8/pASrpvj0GBFmOOlg/SiAtFhuTQld00DJ4FDdvRzOLR86"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (66.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$FTx9FL9p3pIRI59ipX56h.IdOUu.D5x78F2RR2qUahhyFtUhLtTOq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:17 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:17 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$5oO06recKp1/0WP97BYA/.i0LYGYny8UOJFhK2tdRrD7rI6gDrSIK"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:18 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$OF7hIbmSArrwnnLoQP89y.V0dBFK/JUc9NRhTXYoEZ5KnbAYfRkQu"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:18 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$sWeFKNSWPCeyA5L14QYyXuiyOMJsFlF0h8RpFKlNRC0VAL2vdIpl6"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:07:18 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$LfohdcAJDMlF52zQ09U8FebgLwHbOSaGKUUd2tHGWB8P3tXefFFSG"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:07:18 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:07:18 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:07:18 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:18 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$sDYTk9UryBqqX55PZlteOeau4cOYQJW58rSItuhrHAZ5sxtKGqiuy"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by LeaguesController#new as HTML
+  Rendered leagues/new.html.erb within layouts/application (32.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 249ms (Views: 173.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Zyk9ciaXOC7Qru0dGR9Wdu56KRdRVAprlfv.v3xNYWGD15g5afwq6"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.3ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$wJekyi9nzta3ZBfE8.fURudp5gRoNrRZqQFUn0ONQtwUQRGgTjHRm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+Started DELETE "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by LeaguesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "leagues" WHERE "leagues"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 15ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$WDnGkYY7J/OP6Hw.mqZwsObGuuIMOEYaXzJyK6WLpPHdTYehyv7.2"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+Started GET "/predraft_rankings/1" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$vmweo5XlnG/CmVvATrKQe.yDRmqWbqtMi1Ld1o6z0YMCQ2OKj5o.q"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$McFjnJwV92PARTDgTNPE6ujIiVgolkJ5lVHssCkpVb19uzhMjn8TO"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:41 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$zQaZ6w.lYzGOcoTOh4dSBuiBtuai81JeiR.xO0FUvtib1KPbV6Xmq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:42 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$hPDx2OIQW5YzDGquPMVouemoB4ZLvno.IC7f/Pvev8sZu8lgwIOiK"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:42 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$vEwNQ/ZXUbOo8CDIqSNyEO2MPf1LM5ct.459bw1RFO4tsxB8aA0RO"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:42 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$YGlJvViYwCuwgwHC86QCuulO4WvU5wl/XasSqDs6gG.y05HAeNNQS"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:07:42 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:07:42 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:07:42 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:07:42 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$ZxaePECgPATDAplzNCa9LeCtSEK5/mdQG1nE85qSJ1Nl9o5hLKrFm"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.3ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/edit.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 181ms (Views: 172.5ms | ActiveRecord: 0.3ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered leagues/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$psdW1iXD5iJoMx9ftBV1ROgCkll3bRsm7EoLAyNEa7cJOe1qLyl/K"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+Started DELETE "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by LeaguesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "leagues" WHERE "leagues"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 15ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$EndvxH04sLdlb9sSXIMe8OVqM.wxjOxu50l49eSfXlN2KUPQMMNwq"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$BccQJLUUUTulQo2A3TKLveOsfm1F2BKK2hYeH/mIBpgx4UB6U76Gi"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:02 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:02 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$F87owPA1NBNw6xt3yus3lOGzOvj21c9ZlCoxp./OHqiW0FqGVoTju"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:03 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$eEYQ6yg7QynqCkpM/m.TP.kgvz/uGQAYxZdsVJxcptwH9ggGHf.oK"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:03 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$KS0kQ22sfCQwOXhaqxFCpu..Sw8znzIH99.Q5ujIsobY4zpwyBR/m"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:03 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$W57H6dTnWdP4Hb2QlD6nw.JkANqs5h6a9Yh0FKGM6WdD2Urwl8y3q"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:08:03 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Shft2xA.tRdb.7JV/RSzvO2jjK3mGgpFr/kBTWkYzIoEA5yndZHHK"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:08:03 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+Started GET "/predraft_rankings/1" for 127.0.0.1 at 2014-03-12 07:08:03 -0500
+Processing by PredraftRankingsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 6ms
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Fwfl6zqpBqjDuD5KYufjre91.2n0nlvCuRyyd/67Y8JF50hFEd7ju"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:08:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:08:03 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$QbwO/PsrYesHPBSpclSnT.sKgq3z2NKIh8t2LqR4MpOiL3WCorStW"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.3ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered leagues/edit.html.erb within layouts/application (30.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 182ms (Views: 173.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$ennIA84WwPFXIljQsWhipOvKbqzNTmH7LOif8YYDRzR/Dr2dfFrAS"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/leagues/new" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$RVpZM9oNDipDiBq8J/GRI.1TXh6n/sTEOciIbNwhcj9KdDNZk.Xy."], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (64.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.1ms)
+Started GET "/predraft_rankings/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by PredraftRankingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (14.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$6aKXVNudCqIqVFWY2jFyX.DjmWObQl6WYWl.0Uc3LQ.MRTXHw/fUK"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.2ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$bDjNTFZ1CBrQqBsbw1jmo.liswC7bV8kHAYqOJ1b.JvLAYIriwPwe"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Jv8LIGhqWb7KN6LVj2VhO.FyszgxZkPevcqU7WfbgRcmSdLFMzgNW"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$qQ8h/rupyVvn2Zsi6dt8UO6WuzjemsH84TEXnUl3UE5WpQOzgQW46"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$Ix3ch4PNC2u0HpRHDOWCj.P0AVd5jqfoCTQr.exE7SiLAsrtIp1rS"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$nCqqo1pBtwzjzXONA96w4.WwqUD6GzyCVYDsd58h6ymUk.6CF2B8C"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:05 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+Started DELETE "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by LeaguesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "leagues" WHERE "leagues"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-03-12 07:11:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 1ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-12 07:11:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pookie@pookie.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 12 Mar 2014 12:11:06 UTC +00:00], ["email", "pookie@pookie.com"], ["encrypted_password", "$2a$04$ciVnn5H1YTLhEAvAgTyoGexHFZzNY9cuPFn7p0Y2FM5863X3CvZf6"], ["name", "Pookie"], ["updated_at", Wed, 12 Mar 2014 12:11:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leagues" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 12 Mar 2014 12:11:06 UTC +00:00], ["name", "My Test League"], ["updated_at", Wed, 12 Mar 2014 12:11:06 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:11:06 -0500
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLeague Load (0.1ms)[0m  SELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+Started POST "/leagues/1/edit" for 127.0.0.1 at 2014-03-12 07:11:06 -0500
+Processing by LeaguesController#update as HTML
+  Parameters: {"utf8"=>"✓", "League"=>{"passTDs"=>"8", "passYds"=>"0", "intThrown"=>"-5", "rushTDs"=>"0", "rushYds"=>"0", "recTDs"=>"0", "recYds"=>"0", "retTDs"=>"0", "fumbLost"=>"-5", "twoPt"=>"0", "FG50up"=>"0", "FG40to49"=>"0", "FG39down"=>"0", "PAT"=>"0", "FGmissed"=>"-5", "defTD"=>"0", "defINT"=>"0", "defFumbRec"=>"0", "defBlock"=>"0", "defSack"=>"0", "defSafety"=>"0", "ptsAllowed0"=>"0", "ptsAllowed1to6"=>"0", "ptsAllowed7to13"=>"-5", "ptsAllowed14to17"=>"-5", "ptsAllowed18to27"=>"-5", "ptsAllowed28to34"=>"-5", "ptsAllowed35to45"=>"-10", "ptsAllowed46plus"=>"-10"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "leagues" SET "passTDs" = ?, "passYds" = ?, "intThrown" = ?, "rushTDs" = ?, "rushYds" = ?, "recTDs" = ?, "recYds" = ?, "twoPt" = ?, "retTDs" = ?, "fumbLost" = ?, "FG50up" = ?, "FG40to49" = ?, "FG39down" = ?, "PAT" = ?, "FGmissed" = ?, "defTD" = ?, "defINT" = ?, "defFumbRec" = ?, "defBlock" = ?, "defSafety" = ?, "defSack" = ?, "ptsAllowed0" = ?, "ptsAllowed1to6" = ?, "ptsAllowed7to13" = ?, "ptsAllowed14to17" = ?, "ptsAllowed18to27" = ?, "ptsAllowed28to34" = ?, "ptsAllowed35to45" = ?, "ptsAllowed46plus" = ?, "updated_at" = ? WHERE "leagues"."id" = 1[0m  [["passTDs", 8], ["passYds", 0], ["intThrown", -5], ["rushTDs", 0], ["rushYds", 0], ["recTDs", 0], ["recYds", 0], ["twoPt", 0], ["retTDs", 0], ["fumbLost", -5], ["FG50up", 0], ["FG40to49", 0], ["FG39down", 0], ["PAT", 0], ["FGmissed", -5], ["defTD", 0], ["defINT", 0], ["defFumbRec", 0], ["defBlock", 0], ["defSafety", 0], ["defSack", 0], ["ptsAllowed0", 0], ["ptsAllowed1to6", 0], ["ptsAllowed7to13", -5], ["ptsAllowed14to17", "-5"], ["ptsAllowed18to27", "-5"], ["ptsAllowed28to34", "-5"], ["ptsAllowed35to45", "-10"], ["ptsAllowed46plus", -10], ["updated_at", Wed, 12 Mar 2014 12:11:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/leagues/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+Started GET "/leagues/1" for 127.0.0.1 at 2014-03-12 07:11:06 -0500
+Processing by LeaguesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLeague Load (0.1ms)[0m  [1mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.7ms)[0m  rollback transaction

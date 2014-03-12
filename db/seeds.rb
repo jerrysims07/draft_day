@@ -92,3 +92,14 @@ CSV.foreach(csv_file_path) do |row|
     :year => row[22]
   })
 end
+
+csv_file_path = 'data/players.csv'
+
+CSV.foreach(csv_file_path) do |row|
+  Player.create!({
+    :name => row[0],
+    :position => row[1],
+    :team => row[2]
+  })
+end
+

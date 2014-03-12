@@ -10,6 +10,8 @@ class LeaguesController < ApplicationController
     @league = current_user.leagues.new(league_params)
     # @statCat = (standardScore => params[:ScoringRule][:passTDs], name => params[:ScoringRule])
     if @league.save
+      create_scoring_projections @league
+      create_predraft_rankings @league
       redirect_to user_path current_user 
 
     # else

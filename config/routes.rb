@@ -7,6 +7,7 @@ DraftDay::Application.routes.draw do
   root to: 'static_pages#home'
   resources :users, only: [:show]
   resources :leagues
+  resources :predraft_rankings, only: [:show, :edit]
 
   get "static_pages/home"
   get '/help', to: 'static_pages#help'

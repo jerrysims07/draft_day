@@ -41,8 +41,8 @@ describe "League Pages" do
       expect(page).to have_link('Edit League')
     end
 
-    it "should have 'Update Players' button" do
-      expect(page).to have_link('Update Players')
+    it "should have 'Update Pre-draft Rankings' button" do
+      expect(page).to have_link('Update Pre-draft Rankings')
     end
 
     it "should have 'Delete' button" do
@@ -84,6 +84,17 @@ describe "League Pages" do
     it "gets rid of league name" do
       expect(page).to have_no_content(league.name)
     end
-
   end
+  context "clicking 'Update Predraft Rankings'" do
+    before(:each) do 
+      LeaguesController.any_instance.stub(current_user: user, authenticate_user!: true)
+      visit league_path(league.id)
+      click_link('Update Pre-draft Rankings')
+    end
+
+    it "shows some players listed" do
+      expect(page).to have_content('Jamaal Charles')
+    end
+  end
+
 end
