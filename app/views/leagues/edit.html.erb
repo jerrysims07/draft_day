@@ -4,28 +4,32 @@
 <p>
   <div>
     <%= form_for :League do |f| %>
-    <div>
-      <h3>Quarterbacks</h3>
-      Passing Touchdowns:   <%= f.select(:passTDs, (0..10), :selected => @league.passTDs)     %> points per TD<br />
-      Passing Yards:        <%= f.select(:passYds, (0..100), :selected => @league.passYds)       %> yards per point<br />
-      Interception Thrown:  <%= f.select(:intThrown, (-5..0), :selected => @league.intThrown) %> points per INT <br />
+        <%= f.submit "Update" %>
+  </div>
+    <div class="grouper">
+      <div>
+        <h3>Quarterbacks</h3>
+        Passing Touchdowns:   <%= f.select(:passTDs, (0..10), :selected => @league.passTDs)     %> points per TD<br />
+        Passing Yards:        <%= f.select(:passYds, (0..100), :selected => @league.passYds)       %> yards per point<br />
+        Interception Thrown:  <%= f.select(:intThrown, (-5..0), :selected => @league.intThrown) %> points per INT <br />
+      </div>
+      <div>
+        <h3>All Offense</h3>
+        Fumble Lost: <%= f.select(:fumbLost, (-5..0), :selected => @league.fumbLost) %> points per  fumble<br />
+        2-point Conversions: <%= f.select(:twoPt, (0..5), :selected => @league.twoPt) %> points per conversion.<br />
+      </div>
+      <div>
+      <h3>WR / RB / TE </h3>  
+        Rushing Touchdowns: <%= f.select(:rushTDs, (0..10), :selected => @league.rushTDs) %>
+        points per TD<br />
+        Rushing Yards: <%= f.select(:rushYds, (0..100), :selected => @league.rushYds) %> yards per point<br />
+        Receiving Touchdowns: <%= f.select(:recTDs, (0..10), :selected => @league.recTDs) %>
+        points per TD<br />
+        Receiving Yards: <%= f.select(:recYds, (0..100), :selected => @league.recYds) %> yards per point<br />
+        Return Touchdowns: <%= f.select(:retTDs, (0..10), :selected => @league.retTDs) %> points per TD<br />
+      </div>
     </div>
-    <div>
-    <h3>WR / RB / TE </h3>  
-      Rushing Touchdowns: <%= f.select(:rushTDs, (0..10), :selected => @league.rushTDs) %>
-      points per TD<br />
-      Rushing Yards: <%= f.select(:rushYds, (0..100), :selected => @league.rushYds) %> yards per point<br />
-      Receiving Touchdowns: <%= f.select(:recTDs, (0..10), :selected => @league.recTDs) %>
-      points per TD<br />
-      Receiving Yards: <%= f.select(:recYds, (0..100), :selected => @league.recYds) %> yards per point<br />
-      Return Touchdowns: <%= f.select(:retTDs, (0..10), :selected => @league.retTDs) %> points per TD<br />
-    </div>
-    <div>
-      <h3>All Offense</h3>
-      Fumble Lost: <%= f.select(:fumbLost, (-5..0), :selected => @league.fumbLost) %> points per  fumble<br />
-      2-point Conversions: <%= f.select(:twoPt, (0..5), :selected => @league.twoPt) %> points per conversion.<br />
-    </div>
-    <div>
+    <div class="grouper">
       <h3>Kickers</h3>
       Field Goal 50+ yds: <%= f.select(:FG50up, (0..10), :selected => @league.FG50up) %> points per FG<br />
       Field Goal 40-49 yds: <%= f.select(:FG40to49, (0..10), :selected => @league.FG40to49) %> points per FG<br />
@@ -33,7 +37,7 @@
       Extra-Point: <%= f.select(:PAT, (0..3), :selected => @league.PAT) %> points per PAT<br />
       Missed Field Goal: <%= f.select(:FGmissed, (-5..0), :selected => @league.FGmissed) %> points per missed FG
     </div>
-    <div>
+    <div class="grouper">
       <h3>Team Defense</h3>
       Defensive TD: <%= f.select(:defTD, (0..10), :selected => @league.defTD) %> points per TD<br />
       Defensive INT: <%= f.select(:defINT, (0..5), :selected => @league.defINT) %> points per INT<br />

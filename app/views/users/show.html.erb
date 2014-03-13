@@ -1,16 +1,21 @@
 <% provide(:title, @user.name) %>
 <h2>Welcome, <%= @user.name %></h2>
 
-<div>
+<div class="leaguesGroup">
   <% if @user.leagues.count == 0 %>
   You have not created a league yet.
   <% else %>
-  <h3>My Leagues:</h3>
+  <h1>My Leagues:</h1>
+  <h2>Click league name for more options:</h2>
+  <h4>
     <% current_user.leagues.each do |league| %>
       <%= link_to league.name, league_path(league.id) %><br>
     <% end %>
   <% end %>
+  <h4>
 </div>
-<div>
-  <%= link_to "Create New League", new_league_path, class: "btn btn-large btn-primary" %>
+<div id="newLeagueButton">
+<p>
+  <%= link_to "Create New League", new_league_path, class: "btn btn-small btn-primary" %>
+</p>
 </div>

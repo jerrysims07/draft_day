@@ -1,6 +1,6 @@
-class Expected_Draft_Position < ActiveRecord::Base
+class ExpectedDraftPosition < ActiveRecord::Base
 
-  has_many :scoring_projections
+  has_many :projections
   has_many :leagues, through: :scoring_projections
 
 end

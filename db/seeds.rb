@@ -83,13 +83,13 @@ csv_file_path = 'data/WR.csv'
 CSV.foreach(csv_file_path) do |row|
   HistoryStat.create!({
     :position => "WR",
-    :rushYds => row[14],
-    :rushTDs => row[15],
-    :recYds => row[10],
-    :recTDs => row[12],
-    :twoPt => row[20],
-    :fumbLost => row[21],
-    :year => row[22]
+    :rushYds => row[13],
+    :rushTDs => row[14],
+    :recYds => row[9],
+    :recTDs => row[11],
+    :twoPt => row[19],
+    :fumbLost => row[20],
+    :year => row[21]
   })
 end
 
@@ -103,3 +103,12 @@ CSV.foreach(csv_file_path) do |row|
   })
 end
 
+csv_file_path = 'data/ADP.csv'
+
+CSV.foreach(csv_file_path) do |row|
+  ExpectedDraftPosition.create!({
+    :projection => row[0],
+    :position_rank => row[4],
+    :position => row[2]
+  })
+end

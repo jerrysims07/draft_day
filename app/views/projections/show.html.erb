@@ -1,0 +1,18 @@
+<% provide(:title, 'Draft Console') %>
+<table>
+  <thead>
+    <th>Average Draft</td>
+    <th>Player Name </td>
+    <th>Position</td>
+    <th>Projected Points</td>
+  </thead>
+
+  <% @edp.each do |slot| %>
+  <tr>
+    <td><%= slot[:edp].projection %></td>
+    <td><%= slot[:player].name %></td>
+    <td><%= slot[:edp].position %></td>
+    <td><%= slot[:projection].total_pts %></td>
+  </tr>
+  <% end %>
+</table>

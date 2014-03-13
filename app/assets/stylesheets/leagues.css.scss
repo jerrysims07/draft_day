@@ -4,3 +4,31 @@
 select {
   width: 50px
 }
+
+.grouper {
+  width: 300px;
+  float: left;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.leaguesGroup{
+  width: 400px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 75px;
+}
+
+#newLeagueButton p{
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#leagueButtons{
+  width: 600px;
+  margin: auto;
+}

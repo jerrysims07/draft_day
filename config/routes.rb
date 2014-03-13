@@ -7,7 +7,8 @@ DraftDay::Application.routes.draw do
   root to: 'static_pages#home'
   resources :users, only: [:show]
   resources :leagues
-  resources :predraft_rankings, only: [:show, :edit]
+  resources :predraft_rankings, only: [:edit]
+  # resources :projections, only: [:create]
 
   get "static_pages/home"
   get '/help', to: 'static_pages#help'
@@ -23,6 +24,8 @@ DraftDay::Application.routes.draw do
   post '/leagues/new', to: 'leagues#create'
   post '/leagues/:id/edit', to: 'leagues#update', as: :update_league
   delete 'leagues/:id', to: 'leagues#destroy', as: :delete_league
+  post 'predraft_rankings/:id', to: 'predraft_rankings#show', as: :update_rankings
+  post 'leagues/:id/draft', to: 'projections#show', as: :draft
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

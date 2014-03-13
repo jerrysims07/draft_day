@@ -8,8 +8,6 @@ class League < ActiveRecord::Base
   has_many :scoring_projections
   has_many :expected_draft_positions, through: :scoring_projections
 
-  def new  
-  end
 
 end
 

@@ -1,4 +1,4 @@
-the_big_board
+Draft_Day
 =============
 
 A fantasy football draft helper assistant which uses opportunity cost of skipping players in a draft to help determine which player to go with.

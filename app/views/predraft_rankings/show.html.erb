@@ -1,0 +1,81 @@
+<% provide(:title, 'Rankings') %>
+<h1>Pre-Draft Rankings</h1>
+<p>Here are your current pre-draft rankings for this leagues. Change any you would like and click 'Submit'</p>
+<div class= "rankingsList"><h2>Running Backs</h2>
+  <ul>
+    <%= form_for :PredraftRanking do |f| %>
+    <% @rbs.each do |rb| %>
+    <li>
+       <%= f.select(:position_rank,  ((rb[:position_rank].position_rank-5)..(rb[:position_rank].position_rank+5)), :selected => rb[:position_rank].position_rank) %>
+       <%= rb[:rb].name %>
+      <% end %>
+    </li>
+    <%= f.submit "Update" %>
+    <% end %>
+  </ul>
+</div>
+<div class= "rankingsList"><h2>Quarterbacks</h2>
+  <ul>
+    <%= form_for :PredraftRanking do |f| %>
+    <% @qbs.each do |qb| %>
+    <li>
+       <%= f.select(:position_rank,  ((qb[:position_rank].position_rank-5)..(qb[:position_rank].position_rank+5)), :selected => qb[:position_rank].position_rank) %>
+       <%= qb[:qb].name %>
+      <% end %>
+    </li>
+    <%= f.submit "Update" %>
+    <% end %>
+  </ul>
+</div>
+<div class= "rankingsList"><h2>Tight Ends</h2>
+  <ul>
+    <%= form_for :PredraftRanking do |f| %>
+    <% @tes.each do |te| %>
+    <li>
+       <%= f.select(:position_rank,  ((te[:position_rank].position_rank-5)..(te[:position_rank].position_rank+5)), :selected => te[:position_rank].position_rank) %>
+       <%= te[:te].name %>
+      <% end %>
+    </li>
+    <%= f.submit "Update" %>
+    <% end %>
+  </ul>
+</div>
+<div class= "rankingsList"><h2>Wide Receivers</h2>
+  <ul>
+    <%= form_for :PredraftRanking do |f| %>
+    <% @wrs.each do |wr| %>
+    <li>
+       <%= f.select(:position_rank,  ((wr[:position_rank].position_rank-5)..(wr[:position_rank].position_rank+5)), :selected => wr[:position_rank].position_rank) %>
+       <%= wr[:wr].name %>
+      <% end %>
+    </li>
+    <%= f.submit "Update" %>
+    <% end %>
+  </ul>
+</div>
+<div class= "rankingsList"><h2>Kickers</h2>
+  <ul>
+    <%= form_for :PredraftRanking do |f| %>
+    <% @ks.each do |k| %>
+    <li>
+       <%= f.select(:position_rank,  ((k[:position_rank].position_rank-5)..(k[:position_rank].position_rank+5)), :selected => k[:position_rank].position_rank) %>
+       <%= k[:k].name %>
+      <% end %>
+    </li>
+    <%= f.submit "Update" %>
+    <% end %>
+  </ul>
+</div>
+<div class= "rankingsList"><h2>Team Defenses</h2>
+  <ul>
+    <%= form_for :PredraftRanking do |f| %>
+    <% @defns.each do |defn| %>
+    <li>
+       <%= f.select(:position_rank,  ((defn[:position_rank].position_rank-5)..(defn[:position_rank].position_rank+5)), :selected => defn[:position_rank].position_rank) %>
+       <%= defn[:defn].name %>
+      <% end %>
+    </li>
+    <%= f.submit "Update" %>
+    <% end %>
+  </ul>
+</div>

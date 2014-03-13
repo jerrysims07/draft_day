@@ -11,15 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312002755) do
+ActiveRecord::Schema.define(version: 20140313101539) do
 
   create_table "expected_draft_positions", force: true do |t|
     t.integer  "projection"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "player_name"
     t.string   "position"
-    t.string   "team"
     t.string   "position_rank"
   end
 
@@ -110,6 +108,8 @@ ActiveRecord::Schema.define(version: 20140312002755) do
     t.integer "player_id",     null: false
     t.integer "league_id",     null: false
     t.integer "position_rank"
+    t.string  "position"
+    t.string  "concat"
   end
 
   add_index "predraft_rankings", ["league_id", "player_id"], name: "index_predraft_rankings_on_league_id_and_player_id"
@@ -121,6 +121,15 @@ ActiveRecord::Schema.define(version: 20140312002755) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "projections", id: false, force: true do |t|
+    t.integer "league_id",                  null: false
+    t.integer "expected_draft_position_id", null: false
+    t.integer "total_pts"
+  end
+
+  add_index "projections", ["expected_draft_position_id", "league_id"], name: "index_projections_on_expected_draft_position_id_and_league_id"
+  add_index "projections", ["league_id", "expected_draft_position_id"], name: "index_projections_on_league_id_and_expected_draft_position_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
