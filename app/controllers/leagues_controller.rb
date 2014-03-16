@@ -3,19 +3,14 @@ class LeaguesController < ApplicationController
   
   def new 
     @league = League.new
-    # @league.build
   end
     
   def create
     @league = current_user.leagues.new(league_params)
-    # @statCat = (standardScore => params[:ScoringRule][:passTDs], name => params[:ScoringRule])
     if @league.save
       create_scoring_projections @league
       create_predraft_rankings @league
       redirect_to user_path current_user 
-
-    # else
-    #   render 'new'
     end
   end
 
@@ -28,13 +23,12 @@ class LeaguesController < ApplicationController
   end
 
   def update
-    @league = League.find(params['id'])
-    @league.update(league_params)
+    @league = League.find(params[:id])
     redirect_to league_path(@league)
   end
 
   def destroy
-    @league = League.find(params['id'])
+    @league = League.find(params[:id])
     @league.destroy
     redirect_to user_path(current_user)
   end
@@ -74,5 +68,4 @@ class LeaguesController < ApplicationController
     :ptsAllowed35to45,
     :ptsAllowed46plus)
   end
-
 end

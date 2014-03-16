@@ -7,20 +7,12 @@ describe "League Pages" do
   subject { page }
 
   context "new league page" do
-=begin
-    before(:each) do 
-      sign_in user
-      visit user_path(user) 
-      click_link "Create New League"
-    end
-=end
     it "has the correct title" do
       LeaguesController.any_instance.stub(current_user: user, authenticate_user!: true)
       visit new_league_path
       expect(page).to have_title('League')
     end
 
-    #it { should have_title ('League') }
   end
 
   context "show individual league" do

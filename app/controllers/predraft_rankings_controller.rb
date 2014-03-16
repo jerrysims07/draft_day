@@ -55,11 +55,5 @@ class PredraftRankingsController < ApplicationController
       output[:position_rank]=PredraftRanking.find_by(:player_id => defn.id)
       @defns << output
     end
-
-
-    # @rbs.each do |rb|
-    #   rb[position_rank]=PredraftRanking.find(player_id: rb.id)
-    # end
   end
-
 end
